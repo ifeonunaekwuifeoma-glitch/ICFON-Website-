@@ -2,9 +2,6 @@
   "name": "icfn-canada-client",
   "private": true,
   "version": "0.1.0",
-  "engines": {
-    "node": ">=18"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
