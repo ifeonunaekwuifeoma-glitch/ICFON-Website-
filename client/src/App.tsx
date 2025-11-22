@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import HeroSection from './components/HeroSection'
+import API_BASE_URL from './services/api'
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -53,7 +54,7 @@ export default function App() {
     try {
       setLoading(true)
       setSent(null)
-      const res = await fetch('https://icfon-backend.onrender.com/api/contact', {
+      const res = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
